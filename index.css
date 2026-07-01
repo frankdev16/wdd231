@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header, main, footer {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header > nav > ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+
