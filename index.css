@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(237, 237, 224);
+}
 
 header, main, footer {
     padding: 2rem;
@@ -14,6 +17,8 @@ header > nav > ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -21,10 +26,21 @@ h1 {
     padding-bottom: 1rem;
 }
 
+header {
+    text-align: center;
+    background-color: rgb(242, 157, 53);
+}
+
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
 }
+
+footer {
+    text-align: right;
+}
+
+
 
 
