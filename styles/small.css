@@ -127,6 +127,27 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttons button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
 /* --- FOOTER --- */
 footer {
     background-color: var(--primary-color);

@@ -50,7 +50,7 @@ const courses = [
         completed: false
     },
     {
-        subject: 'CIT',
+        subject: 'ITM',
         number: 111,
         title: 'Introduction to Databases',
         credits: 3,
@@ -60,3 +60,51 @@ const courses = [
         completed: true
     }
 ];
+
+const courseContainer = document.getElementById('course-list');
+const totalCreditsDisplay = document.getElementById('total-credits');
+
+function displayCourses(filteredCourses) {
+    courseContainer.innerHTML = '';
+
+    filteredCourses.forEach(course => {
+        const courseCard = document.createElement('div');
+        
+        courseCard.textContent = `${course.subject} ${course.number}`;
+        
+        courseCard.classList.add('course-card');
+
+        if (course.completed === true) {
+            courseCard.classList.add('completed');
+        }
+
+        courseContainer.appendChild(courseCard);
+    });
+
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    totalCreditsDisplay.textContent = totalCredits;
+}
+
+function filterCourses(subject) {
+    if (subject === "all") {
+        displayCourses(courses);
+    } else if (subject === "others") {
+        const filtered = courses.filter(course => course.subject !== "CSE" && course.subject !== "WDD");
+        displayCourses(filtered);
+    } else {
+        const filtered = courses.filter(course => course.subject === subject);
+        displayCourses(filtered);
+    }
+}
+
+const btnAll = document.getElementById("all");
+const btnCSE = document.getElementById("cse");
+const btnWDD = document.getElementById("wdd");
+const btnOTH = document.getElementById("others");
+
+if (btnAll) {
+    btnAll.addEventListener("click", () => filterCourses("all"));
+    btnCSE.addEventListener("click", () => filterCourses("CSE"));
+    btnWDD.addEventListener("click", () => filterCourses("WDD"));
+    btnOTH.addEventListener("click", () => filterCourses("others"));
+}
