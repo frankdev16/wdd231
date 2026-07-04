@@ -1,0 +1,15 @@
+@media screen and (min-width:38rem) {
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        max-width: 90vw;
+        margin: 0 auto;
+        grid-template-columns: 24px auto;
+    }
+
+    .navigation {
+        display: block;
+    }
+}

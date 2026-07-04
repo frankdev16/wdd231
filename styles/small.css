@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #00563B;
+    --secondary-color: #FFB300;
+    --text-dark: #212529;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- HEADER --- */
+header {
+    display: grid;
+    grid-template-columns: 35px auto 50px;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 10px;
+    color: var(--white);
+}
+
+/* --- NAVIGATION --- */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 2rem;
+    text-align: right;
+}
+
+.hamburger::after {
+    content: "\2630";
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none;
+    background-color: #00422d;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+.navigation li.current:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-light);
+}
+
+.navigation li.current a {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* --- MAIN CONTENT (Cards) --- */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+section {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    width: 35px;
+    height: auto;
+}

@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
+    <title>WDD 231 - Web Frontend Development I - Franklin Anyaogu</title>
+    <meta name="description" content="WDD 231 Course Home Page for Franklin Anyaogu">
+    <meta name="author" content="Franklin Anyaogu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
-<body id="root">
-   
+<body>
+    <header>
+        <img src="images/building-fill.svg" alt="site logo">
+        <span>Anyaogu Franklin</span>
+        <button id="nav-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>Course Work</h2>
+        </section>
+        <section>
+            <h2>Port Harcourt Chamber of Commerce</h2>
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div id="course-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://web.facebook.com/Itsfrank007"><img src="images/facebook.svg" alt="facebook"></a>
+            <a href="https://github.com/frankdev16"><img src="images/github.svg" alt="github"></a>
+            <a href="https://www.linkedin.com/in/franklin-anyaogu-30bb00391/"><img src="images/linkedin.svg" alt="linkedin"></a>
+            <a href="https://x.com/NeoCovenant1"><img src="images/twitter-x.svg" alt="twitter-x"></a>
+        </div>
+        <p> &copy; <span id="currentyear"></span>Franklin Anyaogu - Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
