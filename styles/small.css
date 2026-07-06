@@ -167,3 +167,22 @@ footer {
     width: 35px;
     height: auto;
 }
+
+#course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.course-card {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.course-card.completed {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}

@@ -37,4 +37,8 @@
     section:nth-of-type(3) {
         grid-column: 1 / -1;
     }
+
+    #course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
