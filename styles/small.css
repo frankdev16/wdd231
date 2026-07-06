@@ -186,3 +186,9 @@ footer {
     background-color: var(--secondary-color);
     color: var(--text-dark);
 }
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
