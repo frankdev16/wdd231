@@ -1,0 +1,25 @@
+{
+    "family01": {
+        "name": "The Johnsons",
+        "date": "12/21/12",
+        "noOfPeople": 6,
+        "visited": true,
+        "memberData": [
+            {"name": "Kingsley",
+            "gender": "male",
+            "birthday": "2/12/2001"
+        },
+        {
+                "name": "michael",
+                "gender": "male",
+                "birthday": "8/12/2011"
+            },
+            {
+                "name": "angel",
+                "gender": "female",
+                "birthday": "6/6/2005"
+            }
+        ]
+
+    }
+}

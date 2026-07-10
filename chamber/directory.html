@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Harcourt Chamber of Commerce - Directory</title>
+    <meta name="description"
+        content="Business directory for the Port Harcourt Chamber of Commerce. Discover local businesses and services.">
+    <meta name="author" content="Franklin Anyaogu">
+
+    <meta property="og:title" content="Port Harcourt Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frankdev16.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://frankdev16.github.io/wdd231/chamber/images/ph-chamber.webp">
+    <meta property="og:description"
+        content="Discover businesses in Port Harcourt through our Chamber of Commerce directory.">
+
+    <link rel="icon" href="./images/favicon2.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/building-fill.svg" alt="Port Harcourt Chamber of Commerce Logo">
+        <span>Port Harcourt Chamber of Commerce</span>
+        <button id="nav-btn" class="hamburger"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Business Directory</h2>
+
+        <div class="menu">
+            <button id="grid-view" title="Grid View">⏹️ Grid</button>
+            <button id="list-view" title="List View">📄 List</button>
+        </div>
+
+        <article id="directory-container" class="grid"></article>
+    </main>
+
+    <footer>
+        <!-- <div class="contact-info">
+            <p>Port Harcourt Chamber of Commerce</p>
+            <p>123 Trans-Amadi Industrial Layout, Port Harcourt, Rivers State</p>
+            <p>info@phcc.org.ng | +234 800 123 4567</p>
+        </div> -->
+        <div class="dev-info">
+            <p>&copy; <span id="currentyear"></span> Port Harcourt Chamber | Franklin Anyaogu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

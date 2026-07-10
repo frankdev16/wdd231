@@ -1,3 +1,6 @@
+/* =========================================
+   1. VARIABLES & SETUP
+========================================= */
 :root {
     --primary-color: #00563B;
     --secondary-color: #FFB300;
@@ -25,10 +28,12 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* --- HEADER --- */
+/* =========================================
+   2. HEADER & NAVIGATION (Your W1 Code)
+========================================= */
 header {
     display: grid;
-    grid-template-columns: 35px auto 50px;
+    grid-template-columns: 30px auto 50px;
     align-items: center;
     padding: 1rem;
     background-color: var(--primary-color);
@@ -41,13 +46,13 @@ header img {
 }
 
 header span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     margin-left: 10px;
     color: var(--white);
+    text-align: center;
 }
 
-/* --- NAVIGATION --- */
 .hamburger {
     background: none;
     border: none;
@@ -87,73 +92,106 @@ header span {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation li.current:hover a {
     background-color: var(--secondary-color);
     color: var(--text-dark);
-}
-.navigation li.current:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-light);
 }
 
 .navigation li.current a {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* --- MAIN CONTENT (Cards) --- */
+/* =========================================
+   3. MAIN CONTENT & BUTTONS
+========================================= */
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-main h1 {
+main h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
-section {
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-section h2 {
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.buttons {
+.menu {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.buttons button {
+.menu button {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 0.5rem 1rem;
     border: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-.buttons button:hover {
+.menu button:hover {
     background-color: var(--secondary-color);
     color: var(--text-dark);
 }
 
-/* --- FOOTER --- */
+/* =========================================
+   4. DIRECTORY CARDS (The New Logic)
+========================================= */
+#directory-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#directory-container section {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#directory-container section h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#directory-container section img {
+    /* max-width: 100%; */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    aspect-ratio: 4/3;
+}
+
+#directory-container a {
+    text-decoration: none;
+    color: #212529;
+}
+
+#directory-container.list section {
+    text-align: left;
+}
+
+#directory-container.list section img {
+    display: none;
+}
+
+/* =========================================
+   5. FOOTER
+========================================= */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     padding: 1.5rem;
+    margin-top: 2rem;
 }
 
 .social {
@@ -166,31 +204,6 @@ footer {
 .social img {
     width: 1.5rem;
     height: auto;
-}
-
-#course-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-.course-card {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.course-card.completed {
-    background-color: var(--secondary-color);
-    color: var(--text-dark);
-}
-
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 /* --- UPDATED HAMBURGER FIX --- */
@@ -215,3 +228,4 @@ section img {
     content: "\00D7";
     font-size: 2.5rem;
 }
+
