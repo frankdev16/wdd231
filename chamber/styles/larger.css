@@ -39,7 +39,6 @@
         font-size: 1.1rem;
     }
 
-    /* --- DIRECTORY CARDS (Grid View) --- */
     #directory-container.grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -47,7 +46,6 @@
         align-items: stretch;
     }
 
-    /* Constrain the List view so it doesn't stretch too wide on huge monitors */
     #directory-container.list {
         max-width: 800px;
         margin: 0 auto;
