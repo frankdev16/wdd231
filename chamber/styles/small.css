@@ -29,7 +29,7 @@ h3 {
 }
 
 /* =========================================
-   2. HEADER & NAVIGATION (Your W1 Code)
+   2. HEADER & NAVIGATION
 ========================================= */
 header {
     display: grid;
@@ -53,13 +53,18 @@ header span {
     text-align: center;
 }
 
+/* --- THE HAMBURGER (Consolidated) --- */
 .hamburger {
     background: none;
     border: none;
     cursor: pointer;
     color: var(--white);
     font-size: 2rem;
-    text-align: right;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger::after {
@@ -68,6 +73,7 @@ header span {
 
 .hamburger.show::after {
     content: "\00D7";
+    font-size: 2.5rem;
 }
 
 .navigation {
@@ -111,7 +117,7 @@ main {
     margin: 0 auto;
 }
 
-main h1 {
+main h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -140,7 +146,7 @@ main h1 {
 }
 
 /* =========================================
-   4. DIRECTORY CARDS (The New Logic)
+   4. DIRECTORY CARDS
 ========================================= */
 #directory-container {
     display: flex;
@@ -163,7 +169,6 @@ main h1 {
 }
 
 #directory-container section img {
-    /* max-width: 100%; */
     height: auto;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -173,7 +178,6 @@ main h1 {
 #directory-container a {
     text-decoration: none;
     color: #0f68c1;
-    font-weight: 700;
 }
 
 #directory-container.list section {
@@ -206,27 +210,3 @@ footer {
     width: 1.5rem;
     height: auto;
 }
-
-/* --- UPDATED HAMBURGER FIX --- */
-.hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--white);
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hamburger::after {
-    content: "\2630";
-}
-
-.hamburger.show::after {
-    content: "\00D7";
-    font-size: 2.5rem;
-}
-
