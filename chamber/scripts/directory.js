@@ -28,10 +28,12 @@ const displayMembers = (members) => {
         let address = document.createElement('p');
         let phone = document.createElement('p');
         let website = document.createElement('a');
+        let membership = document.createElement('p');
 
         name.textContent = member.name;
         address.textContent = member.address;
         phone.textContent = member.phone;
+        membership.textContent = `Membership Level: ${member.membership_level}`;
         website.textContent = "Visit Website";
         website.href = member.website;
         website.target = "_blank";
@@ -46,6 +48,7 @@ const displayMembers = (members) => {
         card.appendChild(name);
         card.appendChild(address);
         card.appendChild(phone);
+        card.appendChild(membership);
         card.appendChild(website);
 
         directoryContainer.appendChild(card);
