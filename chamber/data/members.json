@@ -5,7 +5,7 @@
     "phone": "0801-123-4567",
     "website": "https://www.riversidetech.com.ng",
     "image": "../images/chamber1.webp",
-    "membership_level": 3,
+    "membershipLevel": 3,
     "industry": "Software Development"
   },
   {
@@ -14,7 +14,7 @@
     "phone": "0802-987-6543",
     "website": "https://www.deltaenergy.ng",
     "image": "../images/chamber2.webp",
-    "membership_level": 3,
+    "membershipLevel": 3,
     "industry": "Oil & Gas Logistics"
   },
   {
@@ -23,7 +23,7 @@
     "phone": "0803-555-0192",
     "website": "https://www.gardencityhotel.com",
     "image": "../images/chamber3.webp",
-    "membership_level": 2,
+    "membershipLevel": 2,
     "industry": "Hospitality"
   },
   {
@@ -32,7 +32,7 @@
     "phone": "0804-444-3333",
     "website": "https://www.phmegamart.com.ng",
     "image": "../images/chamber4.webp",
-    "membership_level": 1,
+    "membershipLevel": 1,
     "industry": "Retail"
   },
   {
@@ -41,7 +41,7 @@
     "phone": "0805-777-8888",
     "website": "https://www.creekmedical.org",
     "image": "../images/chamber5.webp",
-    "membership_level": 2,
+    "membershipLevel": 2,
     "industry": "Healthcare"
   },
   {
@@ -50,7 +50,7 @@
     "phone": "0806-111-2222",
     "website": "https://www.boriagro.com.ng",
     "image": "../images/chamber6.webp",
-    "membership_level": 1,
+    "membershipLevel": 1,
     "industry": "Agriculture"
   },
   {
@@ -59,7 +59,7 @@
     "phone": "0807-999-0000",
     "website": "https://www.transamadibuilders.com",
     "image": "../images/chamber7.webp",
-    "membership_level": 3,
+    "membershipLevel": 3,
     "industry": "Construction"
   },
   {
@@ -68,7 +68,7 @@
     "phone": "0808-222-4444",
     "website": "https://www.oasisfinancial.com.ng",
     "image": "../images/chamber8.webp",
-    "membership_level": 2,
+    "membershipLevel": 2,
     "industry": "Finance"
   },
   {
@@ -77,7 +77,7 @@
     "phone": "0809-555-7777",
     "website": "https://www.ndlogistics.com.ng",
     "image": "../images/chamber9.webp",
-    "membership_level": 1,
+    "membershipLevel": 1,
     "industry": "Logistics"
   }
 ]

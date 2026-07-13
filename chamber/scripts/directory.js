@@ -33,7 +33,7 @@ const displayMembers = (members) => {
         name.textContent = member.name;
         address.textContent = member.address;
         phone.textContent = member.phone;
-        membership.textContent = `Membership Level: ${member.membership_level}`;
+        membership.textContent = `Membership Level: ${member.membershipLevel}`;
         website.textContent = "Visit Website";
         website.href = member.website;
         website.target = "_blank";
