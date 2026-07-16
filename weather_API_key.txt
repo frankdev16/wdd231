@@ -1,0 +1,4 @@
+
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+49.75205052268383, 6.6576874243385555

@@ -24,12 +24,13 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* =========================================
-   2. HEADER & NAVIGATION
+   2. HEADER & NAVIGATION (Shared)
 ========================================= */
 header {
     display: grid;
@@ -108,7 +109,30 @@ header span {
 }
 
 /* =========================================
-   3. MAIN CONTENT & BUTTONS
+   3. FOOTER (Shared)
+========================================= */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    width: 1.5rem;
+    height: auto;
+}
+
+/* =========================================
+   4. DIRECTORY PAGE SPECIFIC (W02)
 ========================================= */
 main {
     padding: 1rem;
@@ -144,9 +168,6 @@ main h1 {
     color: var(--text-dark);
 }
 
-/* =========================================
-   4. DIRECTORY CARDS
-========================================= */
 #directory-container {
     display: flex;
     flex-direction: column;
@@ -188,24 +209,126 @@ main h1 {
 }
 
 /* =========================================
-   5. FOOTER
+   5. HOME PAGE SPECIFIC (W03)
 ========================================= */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+.home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.social {
+.hero {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: brightness(60%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--secondary-color);
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.current-events ul,
+.forecast {
+    list-style-type: none;
+    padding: 0;
+}
+
+.current-events li,
+.forecast li {
+    margin-bottom: 0.8rem;
+}
+
+.current-weather {
     display: flex;
-    justify-content: center;
-    gap: 1.2rem;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.social img {
-    width: 1.5rem;
+.spotlight-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+}
+
+.spotlight-item a {
+    text-decoration: none;
+}
+
+.spotlight-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+.spotlight-item img {
+    width: 100%;
     height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    aspect-ratio: 4/3;
 }

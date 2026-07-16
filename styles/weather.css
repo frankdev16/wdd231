@@ -1,0 +1,58 @@
+/* Reset basic margins and set a clean font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    color: #1a73e8;
+}
+
+main {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#current-temp {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    margin: 1rem 0;
+    color: #1a73e8;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img#weather-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+}
+
+figcaption {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #888;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules Example: Course and Sections</title>
+    <link rel="stylesheet" href="styles/modules.css">
+    <script type="module" src="scripts/modules.mjs"></script>
+    <script src="../../scripts/theme-toggle.js"></script>
+    <script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script>
+    <link href="chrome-extension://alhgpfoeiimagjlnfekdhkjlkiomcapa/js/css/inject.css" rel="stylesheet" type="text/css"
+        data-apio="true">
+    <link data-apio="true" rel="stylesheet" type="text/css"
+        href="chrome-extension://alhgpfoeiimagjlnfekdhkjlkiomcapa/js/css/a_chrome-extension_inject_global_module_scss.css">
+    <link data-apio="true" rel="stylesheet" type="text/css"
+        href="chrome-extension://alhgpfoeiimagjlnfekdhkjlkiomcapa/js/css/a_chrome-extension_inject_apollo-everywhere_containers_ApolloEverywhereServiceContainerV-619a10.css">
+</head>
+
+<body>
+    <main>
+        <h1 id="courseName">Web Frontend Development I</h1>
+        <h2 id="courseCode">WDD231</h2>
+
+        <div id="enrollment">
+            <label for="sectionNumber">Choose a section:</label>
+            <select id="sectionNumber">
+                <option value="0" disabled="" selected="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button id="enrollStudent">Enroll a Student</button>
+            <button id="dropStudent">Drop a Student</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Enrolled</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody id="sections">
+                <tr>
+                    <td>1</td>
+                    <td>88</td>
+                    <td>Brother Bingham</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>81</td>
+                    <td>Sister Shultz</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>95</td>
+                    <td>Sister Smith</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+
+    <div style="position: relative;" id="zp-16-0-1-licdn-root-apollo_everywhere"></div>
+    <div class="extension-opener-icon" style="z-index: 2147483647; position: relative;">
+        <div class="zp apolloio-css-vars-reset x_lAIzV x_ktWFc" dir="ltr">
+            <div class="x_QInVz x_Kgu3K zp-16-0-1-zp-fixed" data-cy="apollo-opener-icon-new"
+                style="right: 0px; top: 10vh; transition: none;"><input type="button"
+                    class="x_D4ma2 apollo-opener-icon x_XZNkd x_IMrUw"><img draggable="false" alt="Apollo"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBmaWxsPSIjZWJmMjEyIiBkPSJtMjEuNDY2IDUuMDcxLjAwNCAxMC45MTVjLjAwMSAxLjcyNS0xLjgzNCAyLjgzLTMuMzU4IDIuMDI0TDcuMTcgMTIuMjIzYTE1LjEgMTUuMSAwIDAgMSAzLjEtMy42NGw4LjU4MiA3LjkzMmMuNDU1LjQyIDEuMTcyLS4wMzYuOTg1LS42MjZMMTYuNTA5IDUuNDFhMTUgMTUgMCAwIDEgNC45NTYtLjMzOE0xOC40OTYgMzQuOTI1bC0uMDA1LTEwLjg2YzAtMS43MjQgMS44MzQtMi44MyAzLjM1OS0yLjAyM2wxMC45NDYgNS43OWExNSAxNSAwIDAgMS0zLjExNiAzLjYyNmwtOC41Ny03LjkyMWMtLjQ1NS0uNDItMS4xNzIuMDM1LS45ODUuNjI1bDMuMzE2IDEwLjQ0MWExNSAxNSAwIDAgMS00Ljk0NS4zMjJNMjMuNDkyIDE4Ljg5OCAzMS40NCAxMC4zYTE1IDE1IDAgMCAwLTMuNjQtMy4xMTNsLTUuODA0IDEwLjk3MmMtLjgwNiAxLjUyNC4zIDMuMzU5IDIuMDI0IDMuMzU4bDEwLjkwNS0uMDA1YTE1LjIgMTUuMiAwIDAgMC0uMzI0LTQuOTU4bC0xMC40ODQgMy4zM2MtLjU5LjE4Ny0xLjA0NS0uNTMtLjYyNS0uOTg1TTUuMDcgMTguNTRsMTAuODcyLS4wMDRjMS43MjUgMCAyLjgzIDEuODM0IDIuMDI0IDMuMzU4TDEyLjE5MiAzMi44MWExNSAxNSAwIDAgMS0zLjYyNy0zLjEwM2w3LjkwNi04LjU1M2MuNDItLjQ1NS0uMDM2LTEuMTcyLS42MjYtLjk4NUw1LjQwOCAyMy40ODRhMTUgMTUgMCAwIDEtLjMzNy00Ljk0MyIvPjwvc3ZnPg=="
+                    class="x_F3Y1O x_uLKvl x_ycTqY">
+                <div class="x_LC0Ct x_i4ji3" data-cy="draggable-extension-icon"></div>
+            </div>
+        </div>
+    </div>
+</body><chatgpt-sidebar data-rendered="true" data-gpts-theme="light"></chatgpt-sidebar>
+
+</html>
