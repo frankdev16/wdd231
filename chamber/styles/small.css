@@ -221,6 +221,7 @@ main h1 {
     position: relative;
     text-align: center;
     color: var(--white);
+    /* background-color: var(--primary-color); */
     margin-bottom: 2rem;
 }
 
@@ -239,10 +240,11 @@ main h1 {
     width: 90%;
 }
 
-.hero-content h2 {
+.hero-content h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: var(--bg-light);
 }
 
 .hero-content p {
@@ -280,12 +282,16 @@ main h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
+.card h2 {
     color: var(--primary-color);
     border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+.card h3 {
+    color: var(--primary-color);
 }
 
 .current-events ul,
