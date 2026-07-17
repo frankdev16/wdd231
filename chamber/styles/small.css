@@ -5,8 +5,8 @@
     --primary-color: #00563B;
     --secondary-color: #FFB300;
     --text-dark: #212529;
-    --bg-light: #F8F9FA;
-    --white: #FFFFFF;
+    --bg-light: #f7f5e8; 
+    --white: #edeff1;
 }
 
 * {
@@ -244,10 +244,11 @@ main h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    color: var(--bg-light);
+    color: var(--white);
 }
 
 .hero-content p {
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
