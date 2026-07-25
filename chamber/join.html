@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Port Harcourt Chamber of Commerce</title>
+    <meta name="description"
+        content="Apply for a Port Harcourt Chamber of Commerce membership today and expand your local business network.">
+    <meta name="author" content="Franklin Anyaogu">
+    <meta property="og:title" content="Join Port Harcourt Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frankdev16.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://frankdev16.github.io/wdd231/chamber/images/ph-chamber.webp">
+    <meta property="og:description"
+        content="Apply for a Port Harcourt Chamber of Commerce membership today and expand your local business network.">
+
+    <link rel="icon" href="./images/favicon2.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <!-- New script strictly for the modals and timestamp -->
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/building-fill.svg" alt="Port Harcourt Chamber of Commerce Logo">
+        <span>Port Harcourt Chamber of Commerce</span>
+        <button id="nav-btn" class="hamburger" aria-label="Toggle Menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-main">
+        <h1>Chamber Membership Application</h1>
+
+        <div class="join-container">
+            <!-- LEFT COLUMN: The Form -->
+            <section class="form-section">
+                <form method="GET" action="thankyou.html" class="join-form">
+                    <fieldset>
+                        <legend>Applicant Information</legend>
+                        <label>First Name:
+                            <input type="text" name="first_name" title="Enter your first name" autocomplete="given-name"
+                                required>
+                        </label>
+                        <label>Last Name:
+                            <input type="text" name="last_name" title="Enter your last name" autocomplete="family-name"
+                                required>
+                        </label>
+                        <label>Organizational Title:
+                            <!-- Pattern: only alpha characters, hyphens, and spaces with a min of 7 characters -->
+                            <input type="text" name="org_title"
+                                title="Title must be at least 7 characters (letters, spaces, and hyphens only)"
+                                autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                        </label>
+                        <label>Email Address:
+                            <input type="email" name="email" title="Enter a valid email address" autocomplete="email"
+                                placeholder="example@email.com" required>
+                        </label>
+                        <label>Mobile Phone:
+                            <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                                required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Business Information</legend>
+                        <label>Business/Organization Name:
+                            <input type="text" name="organization" title="Enter your business or organization name"
+                                autocomplete="organization" required>
+                        </label>
+
+                        <fieldset class="membership-level">
+                            <legend>Membership Level</legend>
+                            <label class="radio-label"><input type="radio" name="membership_level" value="np" required>
+                                Non-Profit (Free)</label>
+                            <label class="radio-label"><input type="radio" name="membership_level" value="bronze"
+                                    required> Bronze Level</label>
+                            <label class="radio-label"><input type="radio" name="membership_level" value="silver"
+                                    required> Silver Level</label>
+                            <label class="radio-label"><input type="radio" name="membership_level" value="gold"
+                                    required> Gold Level</label>
+                        </fieldset>
+
+                        <label>Business Description:
+                            <textarea name="description"
+                                title="Provide a brief description of your business or organization"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Submit Application" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- RIGHT COLUMN: The Benefit Cards -->
+            <section class="cards-section">
+                <div class="member-card np-card">
+                    <h3>Non-Profit Membership</h3>
+                    <button type="button" id="np-btn" class="modal-btn">View Benefits</button>
+                </div>
+                <div class="member-card bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <button type="button" id="bronze-btn" class="modal-btn">View Benefits</button>
+                </div>
+                <div class="member-card silver-card">
+                    <h3>Silver Membership</h3>
+                    <button type="button" id="silver-btn" class="modal-btn">View Benefits</button>
+                </div>
+                <div class="member-card gold-card">
+                    <h3>Gold Membership</h3>
+                    <button type="button" id="gold-btn" class="modal-btn">View Benefits</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals (Hidden by default) -->
+    <dialog id="np-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h2>Non-Profit Benefits</h2>
+            <p>Designed strictly for registered non-profit organizations at no cost.</p>
+            <ul>
+                <li>Free admission to general events</li>
+                <li>Basic business directory listing</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="bronze-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h2>Bronze Benefits</h2>
+            <p>Perfect for startups and small local businesses.</p>
+            <ul>
+                <li>Discounted event tickets</li>
+                <li>Access to weekly training sessions</li>
+                <li>Standard directory listing</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="silver-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h2>Silver Benefits</h2>
+            <p>For growing businesses looking to expand their reach.</p>
+            <ul>
+                <li>2 Free tickets to all premium events</li>
+                <li>Highlighted directory listing</li>
+                <li>Quarterly social media shoutouts</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="gold-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h2>Gold Benefits</h2>
+            <p>The ultimate package for established industry leaders.</p>
+            <ul>
+                <li>Unlimited premium event access</li>
+                <li>Front-page spotlight advertising</li>
+                <li>Direct lobbying representation</li>
+                <li>VIP networking dinners</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="dev-info">
+            <p>&copy; <span id="currentyear"></span> Port Harcourt Chamber | Franklin Anyaogu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

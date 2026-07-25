@@ -342,3 +342,163 @@ main h1 {
     margin-bottom: 0.5rem;
     aspect-ratio: 4/3;
 }
+
+/* =========================================
+   6. JOIN PAGE SPECIFIC (W04)
+========================================= */
+.join-main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.join-form fieldset {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--white);
+}
+
+.join-form legend {
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.join-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.join-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Radio buttons for membership levels */
+.radio-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.radio-label input {
+    margin-right: 0.5rem;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* --- The Membership Benefit Cards & Animations --- */
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.member-card {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInFade 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.member-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.member-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.member-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.member-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideInFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.modal-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+/* --- Modals (The popups) --- */
+dialog {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.close-modal {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

@@ -67,6 +67,17 @@
         border-bottom: none;
         flex: 1;
     }
+
+        /* --- W04 Join Page --- */
+    .join-container {
+            /* Form takes up 2/3 of space, Cards take up 1/3 */
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+     /* made the cards-section align with the form-section */
+    section.cards-section {
+        padding-top: .65rem;
+    }
 }
 
 /* =========================================
@@ -106,5 +117,23 @@
 
     .spotlight-item:last-child {
         border-bottom: none;
+    }
+
+                /* --- W04 Join Page --- */
+    .join-container {
+        /* Form takes up 2/3 of space, Cards take up 1/3 */
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+    /* made the cards-section align with the form-section */
+    section.cards-section {
+        padding-top: .65rem;
+    }
+
+    .member-card {
+        padding: 5.35rem 4rem;
+    }
+    .member-card.silver-card {
+        margin-top: 0.6rem;
     }
 }

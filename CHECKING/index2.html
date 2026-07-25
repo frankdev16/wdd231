@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation Example</title>
+    <style>
+        /* RECIPE 1: Fade from invisible to visible */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 2; }
+        }
+
+        /* RECIPE 2: Change background color */
+        @keyframes fadeColor {
+            0% { background-color: red; }
+            100% { background-color: yellow; }
+        }
+
+        /* THE NOUN: The box that will use the recipes */
+        .box {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            
+            /* LINKING BOTH RECIPES HERE: Separated by a comma */
+            /* Runs fadeIn for 3 seconds, and fadeColor for 3 seconds */
+            animation: fadeIn 3s, fadeColor 3s;
+            
+
+        }
+
+        header{
+            /* width: 100%; */
+            padding: 1rem;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THE HTML: Just apply the class -->
+    <header>
+        <div class="box">Watch Me!</div>
+    </header>
+</body>
+</html>
