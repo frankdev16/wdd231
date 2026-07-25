@@ -26,7 +26,6 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <!-- New script strictly for the modals and timestamp -->
     <script src="scripts/join.js" defer></script>
 </head>
 
@@ -50,7 +49,6 @@
         <h1>Chamber Membership Application</h1>
 
         <div class="join-container">
-            <!-- LEFT COLUMN: The Form -->
             <section class="form-section">
                 <form method="GET" action="thankyou.html" class="join-form">
                     <fieldset>
@@ -64,7 +62,6 @@
                                 required>
                         </label>
                         <label>Organizational Title:
-                            <!-- Pattern: only alpha characters, hyphens, and spaces with a min of 7 characters -->
                             <input type="text" name="org_title"
                                 title="Title must be at least 7 characters (letters, spaces, and hyphens only)"
                                 autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
@@ -103,15 +100,11 @@
                                 title="Provide a brief description of your business or organization"></textarea>
                         </label>
                     </fieldset>
-
-                    <!-- Hidden Timestamp -->
                     <input type="hidden" id="timestamp" name="timestamp">
 
                     <input type="submit" value="Submit Application" class="submit-btn">
                 </form>
             </section>
-
-            <!-- RIGHT COLUMN: The Benefit Cards -->
             <section class="cards-section">
                 <div class="member-card np-card">
                     <h3>Non-Profit Membership</h3>
@@ -132,8 +125,6 @@
             </section>
         </div>
     </main>
-
-    <!-- Modals (Hidden by default) -->
     <dialog id="np-modal">
         <div class="modal-content">
             <button class="close-modal" aria-label="Close">❌</button>
