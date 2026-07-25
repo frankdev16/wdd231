@@ -75,7 +75,7 @@
         align-items: start;
     }
      /* made the cards-section align with the form-section */
-    section.cards-section {
+    .cards-section {
         padding-top: .65rem;
     }
 }
@@ -126,7 +126,7 @@
         align-items: start;
     }
     /* made the cards-section align with the form-section */
-    section.cards-section {
+    .cards-section {
         padding-top: .65rem;
     }
 
