@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Port Harcourt Chamber</title>
+    <meta name="description"
+        content="Thank you for your membership application to the Port Harcourt Chamber of Commerce.">
+    <meta name="author" content="Franklin Anyaogu">
+    <meta property="og:title" content="Thank You - Port Harcourt Chamber">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frankdev16.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:image" content="https://frankdev16.github.io/wdd231/chamber/images/ph-chamber.webp">
+
+    <link rel="icon" href="./images/favicon2.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <!-- Script to extract URL parameters and display them -->
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/building-fill.svg" alt="Port Harcourt Chamber of Commerce Logo">
+        <span>Port Harcourt Chamber of Commerce</span>
+        <button id="nav-btn" class="hamburger" aria-label="Toggle Menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-main">
+        <h1>Application Received!</h1>
+        <div class="join-container" style="display: block; max-width: 600px; margin: 0 auto;">
+            <div class="member-card">
+                <h2>Thank You!</h2>
+                <p>Your application to the Port Harcourt Chamber of Commerce has been successfully submitted. Here is a
+                    summary of your information:</p>
+
+                <div style="text-align: left; margin-top: 1.5rem; line-height: 1.8;">
+                    <p><strong>First Name:</strong> <span id="res-first"></span></p>
+                    <p><strong>Last Name:</strong> <span id="res-last"></span></p>
+                    <p><strong>Email:</strong> <span id="res-email"></span></p>
+                    <p><strong>Mobile Phone:</strong> <span id="res-phone"></span></p>
+                    <p><strong>Business Name:</strong> <span id="res-business"></span></p>
+                    <p><strong>Application Date:</strong> <span id="res-date"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="dev-info">
+            <p>&copy; <span id="currentyear"></span> Port Harcourt Chamber | Franklin Anyaogu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
