@@ -1,0 +1,32 @@
+/* TABLET VIEW (768px and up) */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        border-bottom: none;
+        padding: 0;
+    }
+
+    nav ul.open {
+        position: static;
+    }
+}
+
+/* DESKTOP VIEW (1024px and up) */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+    }
+}

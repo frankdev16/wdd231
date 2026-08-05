@@ -1,0 +1,124 @@
+/* 1. HEADER AND NAVIGATION (Mobile View) */
+header {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-neon);
+}
+
+.logo h1 {
+    color: var(--accent-neon);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* The Hamburger Menu Button */
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hide the navigation links by default on mobile until toggled */
+nav ul {
+    display: none;
+    list-style: none;
+}
+
+nav ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-neon);
+}
+
+nav ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: var(--accent-neon);
+    background-color: rgba(0, 229, 255, 0.05);
+}
+
+/* 2. THE SEARCH SECTION */
+.search-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid #333;
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: var(--accent-neon);
+}
+
+.search-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-neon);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.search-form button:hover {
+    opacity: 0.9;
+}
+
+/* 3. THE MOVIE DISPLAY GRID (Mobile Stack) */
+.movie-display {
+    padding: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+
+/* 4. FOOTER */
+footer {
+    background-color: var(--bg-secondary);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}

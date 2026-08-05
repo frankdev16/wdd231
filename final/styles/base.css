@@ -1,0 +1,83 @@
+/* THE MASTER PAINT BUCKETS (CSS Variables) */
+:root {
+    /* Background Colors */
+    --bg-primary: #121212;
+    /* Dark Charcoal - The main background */
+    --bg-secondary: #1E1E1E;
+    /* Surface Gray - For headers and cards */
+
+    /* Text Colors */
+    --text-primary: #E0E0E0;
+    /* Off-White - For easy reading */
+    --text-secondary: #AAAAAA;
+    /* Dimmer Gray - For dates or small details */
+
+    /* Accent Colors */
+    --accent-neon: #00E5FF;
+    /* Neon Cyan - For buttons and borders */
+
+    /* Typography */
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* BASE RULES FOR EVERY PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+}
+
+/* SETTING UP THE HEADINGS */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* THE MOVIE CARD CONTAINER */
+.movie-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+/* THE MOVIE POSTER */
+.movie-card img {
+    max-width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+}
+
+/* THE TEXT UNDER THE POSTER */
+.card-info {
+    padding: 1rem;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    color: var(--accent-neon);
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
