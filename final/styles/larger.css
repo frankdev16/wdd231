@@ -41,6 +41,11 @@
         padding: 2rem 3rem;
         background: linear-gradient(to top, var(--bg-primary) 0%, rgba(18, 18, 18, 0.7) 50%, transparent 100%);
     }
+
+    dialog {
+        max-width: 50%;
+        height: auto;
+    }
 }
 
 /* DESKTOP VIEW (1024px and up) */
