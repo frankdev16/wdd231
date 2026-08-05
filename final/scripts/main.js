@@ -69,6 +69,10 @@ const movies = [
     }
 ];
 
+// ==========================================
+// LOGIC 4: INJECTING MOVIES INTO THE HTML
+// ==========================================
+
 const movieGrid = document.getElementById('movie-grid');
 
 function displayMovies(movieList) {
@@ -76,20 +80,108 @@ function displayMovies(movieList) {
 
     movieGrid.innerHTML = '';
 
-    movieList.forEach(movie => {
+    movieList.forEach((movie, index) => {
         const card = document.createElement('article'); 
-        
         card.classList.add('movie-card');
+        
+        // THE FIX: Add the click event listener directly to the card
+        card.addEventListener('click', () => {
+            window.openModal(index);
+        });
+
         card.innerHTML = `
-            <img src="${movie.poster}" alt="${movie.title}" loading = "lazy">
-            <div class ="card-info">
+            <img src="${movie.poster}" alt="${movie.title}" loading="lazy">
+            <div class="card-info">
                 <h3>${movie.title}</h3>
                 <p>${movie.year} | ${movie.rating}</p>
             </div>
-        `
-         movieGrid.appendChild(card);
+        `;
+        
+        movieGrid.appendChild(card);
     });
-
 }
 
 displayMovies(movies);
+// ==========================================
+// LOGIC 5: HERO SLIDESHOW TIMER
+// ==========================================
+
+// 1. Find the HTML elements we just created
+const heroImage = document.getElementById('hero-image');
+const heroTitle = document.getElementById('hero-title');
+const heroPlot = document.getElementById('hero-plot');
+
+if (heroImage) {
+    let currentMovieIndex = 0;
+
+    function updateHero() {
+        const featuredMovie = movies[currentMovieIndex];
+        
+        heroImage.style.opacity = 0;
+        heroTitle.style.opacity = 0;
+        heroPlot.style.opacity = 0;
+ 
+        setTimeout(() => {
+            heroImage.src = featuredMovie.poster;
+            heroTitle.innerHTML = featuredMovie.title;
+            heroPlot.innerHTML = featuredMovie.plot;
+            
+            heroImage.style.opacity = 1;
+            heroTitle.style.opacity = 1;
+            heroPlot.style.opacity = 1;
+        }, 500);
+
+        currentMovieIndex++;
+        if (currentMovieIndex >= movies.length) {
+            currentMovieIndex = 0;
+        }
+    }
+
+    updateHero();
+    setInterval(updateHero, 7000);
+}
+
+// ==========================================
+// LOGIC 6: INTERACTIVE MODAL
+// ==========================================
+
+const modal = document.getElementById('movie-modal');
+const closeModalBtn = document.getElementById('close-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalPlot = document.getElementById('modal-plot');
+const modalPoster = document.getElementById('modal-poster');
+
+if (modal) {
+    // Attach to 'window' so inline HTML onclick attributes can see it
+    window.openModal = function(movieIndex) {
+        // Grab the movie from your placeholder array
+        const selectedMovie = movies[movieIndex];
+        
+        // Inject the data
+        modalTitle.innerHTML = selectedMovie.title;
+        modalPlot.innerHTML = selectedMovie.plot;
+        modalPoster.src = selectedMovie.poster;
+        modalPoster.alt = `${selectedMovie.title} Poster`;
+
+        // Pop open the modal natively
+        modal.showModal();
+    };
+
+    // Close button logic
+    closeModalBtn.addEventListener('click', () => {
+        modal.close();
+    });
+
+    // Close if user clicks outside the modal box
+    modal.addEventListener('click', (e) => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            modal.close();
+        }
+    });
+}

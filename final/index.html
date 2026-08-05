@@ -51,6 +51,15 @@
     </header>
 
     <main>
+        <!-- THE HERO SLIDESHOW -->
+        <section class="hero-banner">
+            <img id="hero-image" src="" alt="Featured Movie Banner">
+            <div class="hero-overlay">
+                <h2 id="hero-title">Loading...</h2>
+                <p id="hero-plot"></p>
+            </div>
+        </section>
+
         <section class="search-section">
             <form id="search-form" action="search.html" method="GET" class="search-form">
                 <input id="search-input" type="text" name="query" placeholder="Search for a movie..." required>
@@ -67,11 +76,13 @@
         </section>
     </main>
 
-    <dialog id="movie-modal" class="cinetrack-modal">
+    <!-- THE MOVIE MODAL -->
+    <dialog id="movie-modal">
         <div class="modal-content">
-            <button id="close-modal" aria-label="Close">✕</button>
-            <!-- JavaScript will inject the movie details, plot, and image here when clicked -->
-            <div id="modal-details"></div>
+            <button id="close-modal" aria-label="Close">&times;</button>
+            <img id="modal-poster" src="" alt="Movie Poster">
+            <h2 id="modal-title">Movie Title</h2>
+            <p id="modal-plot">Movie plot goes here.</p>
         </div>
     </dialog>
 

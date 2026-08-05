@@ -21,6 +21,26 @@
     nav ul.open {
         position: static;
     }
+
+    /* Floating Hero Banner (Tablet) */
+    .hero-banner {
+        width: 95%;
+        height: 60vh;
+        margin: 1rem auto;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        object-fit: contain;
+    }
+
+    .hero-banner img {
+        object-position: 50% 65%;
+    }
+
+    .hero-overlay {
+        padding: 2rem 3rem;
+        background: linear-gradient(to top, var(--bg-primary) 0%, rgba(18, 18, 18, 0.7) 50%, transparent 100%);
+    }
 }
 
 /* DESKTOP VIEW (1024px and up) */
@@ -28,5 +48,22 @@
     .grid-container {
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
+    }
+
+    .hero-banner {
+        height: 75vh;
+    }
+
+    .hero-overlay {
+        padding: 3rem 4rem;
+    }
+
+    .hero-overlay h2 {
+        font-size: 3rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2rem;
+        max-width: 800px;
     }
 }
