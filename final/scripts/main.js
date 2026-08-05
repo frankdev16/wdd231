@@ -58,7 +58,7 @@ function displayMovies(movieList) {
         card.addEventListener('click', () => openModal(movie));
 
         card.innerHTML = `
-            <img src="${movie.poster}" alt="${movie.title}" loading="lazy" width="500" height="750">
+            <img src="${movie.poster}" alt="${movie.title}" loading="lazy">
             <div class="card-info">
                 <h3>${movie.title}</h3>
                 <p>${movie.year} | &#9733; ${movie.rating}</p>
