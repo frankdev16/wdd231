@@ -138,8 +138,8 @@ function openModal(movie) {
     currentOpenMovie = movie;
     document.getElementById('modal-title').innerHTML = movie.title;
     document.getElementById('modal-plot').innerHTML = movie.plot;
-    document.getElementById('modal-poster').src = movie.poster;
-    document.getElementById('modal-poster').alt = `${movie.title} Poster`;
+    document.getElementById('modal-poster').src = movie.backdrop || movie.poster;
+    document.getElementById('modal-poster').alt = `${movie.title} Backdrop`;
 
     modal.showModal();
 }

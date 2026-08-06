@@ -35,6 +35,7 @@
 
     .hero-banner img {
         object-position: 50% 65%;
+        aspect-ratio: 2/4;
     }
 
     .hero-overlay {
@@ -43,8 +44,10 @@
     }
 
     dialog {
-        max-width: 40%;
+        max-width: 55%;
         height: 90%;
+        object-fit: cover;
+        aspect-ratio: 3/4;
     }
 }
 
