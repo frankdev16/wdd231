@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTrack - Discover Movies</title>
 
-    <!-- Standard Meta Tags -->
     <meta name="description" content="Explore, search, and curate your personalized movie watchlist with CineTrack.">
     <meta name="author" content="Franklin Anyaogu">
 
-    <!-- Open Graph Meta Tags (For social sharing and SEO) -->
     <meta property="og:title" content="CineTrack - Discover Movies">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://frankdev16.github.io/wdd231/final/index.html">
     <meta property="og:image" content="https://frankdev16.github.io/wdd231/final/images/cinetrack-hero.webp">
-    <meta property="og:description" content="Explore, search, and curate your personalized movie watchlist with CineTrack.">
+    <meta property="og:description"
+        content="Explore, search, and curate your personalized movie watchlist with CineTrack.">
 
-    <!-- Favicon -->
-    <!-- <link rel="icon" href="images/favicon.ico"> -->
+    <!-- PERFORMANCE BOOSTERS: Preconnect to APIs and preload JavaScript modules -->
+    <link rel="preconnect" href="https://api.themoviedb.org">
+    <link rel="preconnect" href="https://image.tmdb.org">
+    <link rel="modulepreload" href="scripts/main.js">
+    <link rel="modulepreload" href="scripts/api.js">
+    <link rel="modulepreload" href="scripts/storage.js">
 
-    <!-- Google Fonts (Inter and Oswald) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap"
         rel="stylesheet">
-    <!-- CSS Stylesheets -->
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -50,11 +52,12 @@
     </header>
 
     <main>
-        <!-- THE HERO SLIDESHOW -->
+        <!-- HERO BANNER FIXED: Hardcoded image with high fetch priority -->
         <section class="hero-banner">
-            <img id="hero-image" src="" alt="Featured Movie Banner">
+            <img id="hero-image" src="https://image.tmdb.org/t/p/w1280/8rpDcsfLJypbO6vtecsmEZzAUoa.jpg"
+                alt="Featured Movie Banner" fetchpriority="high">
             <div class="hero-overlay">
-                <h2 id="hero-title">Loading...</h2>
+                <h2 id="hero-title">Loading trending movies...</h2>
                 <p id="hero-plot"></p>
             </div>
         </section>
@@ -66,19 +69,18 @@
             </form>
         </section>
 
-        <!-- The Movie Grid Container -->
         <section class="movie-display">
             <h2>Trending Now</h2>
             <div id="movie-grid" class="grid-container">
                 <!-- JavaScript will inject the movie cards here -->
             </div>
             <div class="load-more-container" style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-                <button id="load-more-btn" class="watchlist-btn" style="width: auto; padding: 1rem 3rem;">Load More</button>
+                <button id="load-more-btn" class="watchlist-btn" style="width: auto; padding: 1rem 3rem;">Load
+                    More</button>
             </div>
         </section>
     </main>
 
-    <!-- THE MOVIE MODAL -->
     <dialog id="movie-modal">
         <div class="modal-content">
             <button id="close-modal" aria-label="Close">&times;</button>

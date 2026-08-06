@@ -115,8 +115,6 @@ if (loadMoreBtn) {
 }
 
 if (searchForm && searchInput) {
-    searchForm.addEventListener('submit', e => e.preventDefault());
-
     searchInput.addEventListener('input', async (e) => {
         const searchTerm = e.target.value.trim();
         if (searchTerm === '') {
@@ -190,14 +188,43 @@ function renderWatchlist() {
         `;
         watchlistGrid.appendChild(card);
     });
-
-    // Attach event listeners to all dynamic remove buttons
     document.querySelectorAll('.remove-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const titleToRemove = e.target.getAttribute('data-title');
             removeFromWatchlist(titleToRemove);
             renderWatchlist(); 
         });
+    });
+}
+
+// --- CRITERION 7: FORM ACTION PAGE ---
+const params = new URLSearchParams(window.location.search);
+const query = params.get('query');
+
+if (query && document.getElementById('search-results-grid')) {
+    const searchGrid = document.getElementById('search-results-grid');
+    
+    if (searchInput) searchInput.value = query;
+
+    searchMovies(query).then(results => {
+        searchGrid.innerHTML = '';
+        if (results && results.length > 0) {
+            results.forEach(movie => {
+                const card = document.createElement('article');
+                card.classList.add('movie-card');
+                card.addEventListener('click', () => openModal(movie));
+                card.innerHTML = `
+                    <img src="${movie.poster}" alt="${movie.title}" loading="lazy">
+                    <div class="card-info">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.year} | &#9733; ${movie.rating}</p>
+                    </div>
+                `;
+                searchGrid.appendChild(card);
+            });
+        } else {
+            searchGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center;">No movies found for "${query}".</p>`;
+        }
     });
 }
 
