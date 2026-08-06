@@ -48,13 +48,12 @@ nav ul {
 nav ul.open {
     display: flex;
     flex-direction: column;
-    width: 22rem;
-    margin-top: 4rem;
+    width: 20rem;
+    margin-top: 3.2rem;
     position: absolute;
     background: var(--bg-secondary);
     border: 1px solid var(--accent-neon);
     border-radius: 8px;
-    top: 100;
     right: 0;
     z-index: 1000;
 }
