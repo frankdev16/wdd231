@@ -50,7 +50,7 @@ h2 {
 
 /* ACCESSIBILITY*/
 .visually-hidden {
-    position: absolute;
+    /* position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -58,7 +58,8 @@ h2 {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
+    border: 0; */
+    text-align: center;
 }
 
 /* THE MOVIE CARD CONTAINER */
@@ -187,4 +188,12 @@ dialog::backdrop {
 .remove-btn:hover {
     background-color: #ff4757;
     color: #ffffff;
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
 }

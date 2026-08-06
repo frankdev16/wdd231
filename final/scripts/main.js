@@ -38,7 +38,7 @@ async function initApp() {
             displayMovies(movies);
             startHeroSlideshow();
         } else {
-            movieGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Failed to load movies.</p>';
+            movieGrid.innerHTML = '<p class="empty-message">Failed to load movies.</p>';
         }
     }
 
@@ -126,7 +126,7 @@ if (searchForm && searchInput) {
         if (searchResults && searchResults.length > 0) {
             displayMovies(searchResults);
         } else if (movieGrid) {
-            movieGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center;">No movies found matching "${searchTerm}".</p>`;
+            movieGrid.innerHTML = `<p class="empty-message">No movies found matching "${searchTerm}".</p>`;
         }
     });
 }
@@ -170,7 +170,7 @@ function renderWatchlist() {
     watchlistGrid.innerHTML = '';
 
     if (savedMovies.length === 0) {
-        watchlistGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Your watchlist is empty. Go add some movies!</p>';
+        watchlistGrid.innerHTML = '<p class="empty-message">Your watchlist is empty. Go add some movies!</p>';
         return;
     }
 
@@ -188,6 +188,7 @@ function renderWatchlist() {
         `;
         watchlistGrid.appendChild(card);
     });
+    
     document.querySelectorAll('.remove-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const titleToRemove = e.target.getAttribute('data-title');
@@ -223,7 +224,7 @@ if (query && document.getElementById('search-results-grid')) {
                 searchGrid.appendChild(card);
             });
         } else {
-            searchGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center;">No movies found for "${query}".</p>`;
+            searchGrid.innerHTML = `<p class="empty-message">No movies found for "${query}".</p>`;
         }
     });
 }
