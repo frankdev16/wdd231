@@ -32,7 +32,7 @@ function formatMovies(results) {
         year: movie.release_date ? movie.release_date.split('-')[0] : 'N/A',
         rating: movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A',
         poster: movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'images/placeholder.jpg',
-        backdrop: movie.backdrop_path ? `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}` : '',
+        backdrop: movie.backdrop_path ? `https://image.tmdb.org/t/p/w780${movie.backdrop_path}` : '',
         plot: movie.overview || 'No description available.'
     }));
 }

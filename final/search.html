@@ -6,37 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTrack - Search Results</title>
 
-    <!-- Standard Meta Tags -->
     <meta name="description" content="Search for your favorite movies and add them to your CineTrack watchlist.">
     <meta name="author" content="Franklin Anyaogu">
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="CineTrack - Search Results">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://frankdev16.github.io/wdd231/final/search.html">
     <meta property="og:image" content="https://frankdev16.github.io/wdd231/final/images/cinetrack-hero.webp">
     <meta property="og:description" content="Search for your favorite movies and add them to your CineTrack watchlist.">
 
-    <!-- Google Fonts -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap"
         rel="stylesheet">
 
-    <!-- CSS Stylesheets (Your exact order) -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript -->
     <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h1>CineTrack</h1>
+            <span class="logo-title">CineTrack</span>
         </div>
 
         <nav>
@@ -49,7 +46,8 @@
     </header>
 
     <main>
-        <!-- The Search Bar -->
+        <h1 class="visually-hidden">CineTrack Search Results</h1>
+
         <section class="search-section">
             <form id="search-form" action="search.html" method="GET" class="search-form">
                 <input id="search-input" type="text" name="query" placeholder="Search for a movie..." required>
@@ -57,7 +55,6 @@
             </form>
         </section>
 
-        <!-- Search results -->
         <section class="movie-display">
             <h2>Search Results</h2>
             <div id="search-results-grid" class="grid-container">

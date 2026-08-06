@@ -16,7 +16,10 @@
     <meta property="og:description"
         content="Explore, search, and curate your personalized movie watchlist with CineTrack.">
 
-    <!-- PERFORMANCE BOOSTERS: Preconnect to APIs and preload JavaScript modules -->
+    <!-- Added Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- PERFORMANCE BOOSTERS -->
     <link rel="preconnect" href="https://api.themoviedb.org">
     <link rel="preconnect" href="https://image.tmdb.org">
     <link rel="modulepreload" href="scripts/main.js">
@@ -39,7 +42,7 @@
 <body>
     <header>
         <div class="logo">
-            <h1>CineTrack</h1>
+            <span class="logo-title">CineTrack</span>
         </div>
 
         <nav>
@@ -52,9 +55,11 @@
     </header>
 
     <main>
-        <!-- HERO BANNER FIXED: Hardcoded image with high fetch priority -->
+        <h1 class="visually-hidden">CineTrack - Discover Trending Movies</h1>
+
+        <!-- HERO BANNER -->
         <section class="hero-banner">
-            <img id="hero-image" src="https://image.tmdb.org/t/p/w1280/8rpDcsfLJypbO6vtecsmEZzAUoa.jpg"
+            <img id="hero-image" src="https://image.tmdb.org/t/p/w780/8rpDcsfLJypbO6vtecsmEZzAUoa.jpg"
                 alt="Featured Movie Banner" fetchpriority="high">
             <div class="hero-overlay">
                 <h2 id="hero-title">Loading trending movies...</h2>
@@ -74,9 +79,9 @@
             <div id="movie-grid" class="grid-container">
                 <!-- JavaScript will inject the movie cards here -->
             </div>
-            <div class="load-more-container" style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-                <button id="load-more-btn" class="watchlist-btn" style="width: auto; padding: 1rem 3rem;">Load
-                    More</button>
+
+            <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn">Load More</button>
             </div>
         </section>
     </main>

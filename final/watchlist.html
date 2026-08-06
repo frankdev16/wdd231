@@ -6,44 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTrack - My Watchlist</title>
 
-    <!-- Standard Meta Tags -->
     <meta name="description" content="View and manage your personal movie watchlist on CineTrack.">
     <meta name="author" content="Franklin Anyaogu">
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="CineTrack - My Watchlist">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://frankdev16.github.io/wdd231/final/watchlist.html">
     <meta property="og:image" content="https://frankdev16.github.io/wdd231/final/images/cinetrack-hero.webp">
     <meta property="og:description" content="View and manage your personal movie watchlist on CineTrack.">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- PERFORMANCE BOOSTERS -->
     <link rel="preconnect" href="https://api.themoviedb.org">
     <link rel="preconnect" href="https://image.tmdb.org">
     <link rel="modulepreload" href="scripts/main.js">
     <link rel="modulepreload" href="scripts/api.js">
     <link rel="modulepreload" href="scripts/storage.js">
 
-    <!-- CSS Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript -->
     <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h1>CineTrack</h1>
+            <span class="logo-title">CineTrack</span>
         </div>
         <nav>
             <button id="nav-btn" class="hamburger" aria-label="Toggle Menu">&#9776;</button>
@@ -55,6 +51,8 @@
     </header>
 
     <main>
+        <h1 class="visually-hidden">Your Personal Watchlist</h1>
+
         <section class="movie-display">
             <h2>My Watchlist</h2>
             <div id="watchlist-grid" class="grid-container">
