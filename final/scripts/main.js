@@ -199,7 +199,7 @@ function renderWatchlist() {
     });
 }
 
-// --- CRITERION 7: FORM ACTION PAGE ---
+// ---  FORM ACTION PAGE ---
 const params = new URLSearchParams(window.location.search);
 const query = params.get('query');
 
