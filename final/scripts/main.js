@@ -131,6 +131,7 @@ if (searchForm && searchInput) {
     });
 }
 
+
 // --- MODAL LOGIC ---
 function openModal(movie) {
     if (!modal) return;
