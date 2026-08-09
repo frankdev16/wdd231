@@ -1,5 +1,6 @@
 import { fetchMovies, searchMovies } from './api.js';
 import { getWatchlist, addToWatchlist, removeFromWatchlist } from './storage.js';
+import { displayThanksData } from './thanks.js';
 
 // --- GLOBAL STATE ---
 let movies = [];
@@ -17,8 +18,15 @@ const searchInput = document.getElementById('search-input');
 const modal = document.getElementById('movie-modal');
 
 // --- FOOTER & NAV ---
-document.getElementById('currentyear').innerHTML = new Date().getFullYear();
-document.getElementById('lastModified').innerHTML = `Last Modification: ${document.lastModified}`;
+// document.getElementById('currentyear').innerHTML = new Date().getFullYear();
+// document.getElementById('lastModified').innerHTML = `Last Modification: ${document.lastModified}`;
+
+// --- FOOTER & NAV ---
+const yearElement = document.getElementById('currentyear');
+if (yearElement) yearElement.innerHTML = new Date().getFullYear();
+
+const lastModElement = document.getElementById('lastModified');
+if (lastModElement) lastModElement.innerHTML = `Last Modification: ${document.lastModified}`;
 
 const navButton = document.getElementById('nav-btn');
 const navMenu = document.getElementById('nav-menu');
@@ -230,5 +238,11 @@ if (query && document.getElementById('search-results-grid')) {
     });
 }
 
-// Boot up the application
-initApp();
+// --- BOOT UP THE APPLICATION ---
+document.addEventListener('DOMContentLoaded', () => {
+    
+    initApp();
+
+    displayThanksData();
+    
+});
