@@ -157,7 +157,8 @@ dialog::backdrop {
 .watchlist-btn {
     padding: 0.8rem;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    display: inline-block;
 }
 
 .load-more-btn {
@@ -205,4 +206,9 @@ dialog::backdrop {
 
 .video-presentation, .newsletter {
     margin: 1rem;
+}
+
+.thanks-message {
+    text-align: center;
+    padding: 4rem 1rem;
 }
